@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.LoginActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="151dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/logo_app"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/yekan_bakh_fa_num_regular"
+        android:text="ورود یا ثبت نام"
+        android:textSize="22sp"
+        android:textColor="#141414"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <TextView
+
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yekan_bakh_fa_num_regular"
+            android:text="لطفا شماره موبایل خود را وارد کنید."
+            android:textSize="16sp"
+            android:textColor="#141414"
+            app:layout_constraintEnd_toEndOf="@+id/textView"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <EditText
+            android:id="@+id/edtInputPhone"
+            android:layout_width="0dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/background_login_input_phone"
+            android:fontFamily="@font/yekan_bakh_fa_num_regular"
+            android:hint="شماره موبایل"
+            android:maxLength="11"
+            android:maxLines="11"
+            android:textColor="#141414"
+            android:padding="5dp"
+            android:textDirection="rtl"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/textView2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/txtErrorPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yekan_bakh_fa_num_regular"
+            android:text="شماره باید با 09 شروع میشد ! جهت رفاه شما اونو اصلاح کردیم"
+            android:textColor="#ED2E2E"
+            android:textSize="14dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/edtInputPhone"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/edtInputPhone"
+            app:layout_constraintTop_toBottomOf="@+id/edtInputPhone" />
+
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/ic_close"
+            app:layout_constraintBottom_toBottomOf="@+id/edtInputPhone"
+            app:layout_constraintStart_toStartOf="@+id/edtInputPhone"
+            app:layout_constraintTop_toTopOf="@+id/edtInputPhone" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLogin"
+            android:layout_width="388dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/background_gradint"
+            android:enabled="false"
+            android:fontFamily="@font/yekan_bakh_fa_num_regular"
+            android:text="تایید و ادامه"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtInputPhone" />
+
+        <TextView
+
+            android:id="@+id/txtRule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/yekan_bakh_fa_num_regular"
+            android:text="شرایط و قوانین لرن آکادمی را مطالعه کرده‌ام و می‌پذیرم."
+            android:textSize="15sp"
+            android:textColor="#141414"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

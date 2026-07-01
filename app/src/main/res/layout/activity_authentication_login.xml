@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="mr.moridi.videoplayer.activity.AuthenticationLoginActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="151dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/logo_app"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/yekan_bakh_fa_num_regular"
+        android:text="کد تایید ۵ رقمی را وارد کنید."
+        android:textColor="#141414"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/txtSendCodeToPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/yekan_bakh_fa_num_regular"
+        android:text="کد تایید برای شماره موبایل  ارسال شد."
+        android:textColor="#141414"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView5"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/txtEditNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:fontFamily="@font/yekan_bakh_fa_num_regular"
+        android:text="ویرایش شماره"
+        android:textColor="#000080"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_edit_number"
+        app:layout_constraintEnd_toStartOf="@+id/img_edit_number"
+        app:layout_constraintTop_toTopOf="@+id/img_edit_number" />
+
+    <ImageView
+        android:id="@+id/img_edit_number"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="3dp"
+        android:src="@drawable/ic_edit_number"
+        app:layout_constraintEnd_toEndOf="@+id/txtSendCodeToPhone"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSendCodeToPhone" />
+
+    <LinearLayout
+        android:id="@+id/edtInputCode"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_edit_number">
+
+        <EditText
+            android:id="@+id/edtInputCode1"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/background_login_input_phone"
+            android:fontFamily="@font/yekan_bakh_fa_num_regular"
+            android:inputType="number"
+            android:maxLength="1"
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:textColor="#141414"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edtInputCode2"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/background_login_input_phone"
+            android:fontFamily="@font/yekan_bakh_fa_num_regular"
+            android:inputType="number"
+            android:maxLength="1"
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:textColor="#141414"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edtInputCode3"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/background_login_input_phone"
+            android:fontFamily="@font/yekan_bakh_fa_num_regular"
+            android:inputType="number"
+            android:maxLength="1"
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:textColor="#141414"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edtInputCode4"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/background_login_input_phone"
+            android:fontFamily="@font/yekan_bakh_fa_num_regular"
+            android:inputType="number"
+            android:maxLength="1"
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:textColor="#141414"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edtInputCode5"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/background_login_input_phone"
+            android:fontFamily="@font/yekan_bakh_fa_num_regular"
+            android:inputType="number"
+            android:maxLength="1"
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:textColor="#141414"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtErrorCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/yekan_bakh_fa_num_regular"
+        android:text="کد تایید وارد شده نامعتبر است."
+        android:textColor="#ED2E2E"
+        android:textSize="12dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/edtInputCode"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/edtInputCode"
+        app:layout_constraintTop_toBottomOf="@+id/edtInputCode" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLoginCode"
+        android:layout_width="388dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="30dp"
+        android:alpha="0.5"
+        android:background="@drawable/background_gradint"
+        android:enabled="false"
+        android:fontFamily="@font/yekan_bakh_fa_num_regular"
+        android:text="ورود"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtInputCode" />
+
+    <TextView
+
+        android:id="@+id/txtRepeatSendCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/yekan_bakh_fa_num_regular"
+        android:text="ثانیه تا ارسال مجدد"
+        android:textColor="#141414"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLoginCode" />
+
+    <TextView
+
+        android:id="@+id/txtTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:fontFamily="@font/yekan_bakh_fa_num_regular"
+        android:text="2:00"
+        android:textColor="#141414"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtRepeatSendCode"
+        app:layout_constraintStart_toEndOf="@+id/txtRepeatSendCode"
+        app:layout_constraintTop_toTopOf="@+id/txtRepeatSendCode" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

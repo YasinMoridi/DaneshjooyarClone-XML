@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".activity.PlayFinalActivity">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/supportTicket"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="start|center"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/ic_support_action_bar" />
+
+        <ImageView
+            android:layout_width="39dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center"
+            android:src="@drawable/logo_app" />
+
+        <ImageView
+            android:id="@+id/ic_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="end|center"
+            android:layout_marginEnd="20dp"
+            android:rotation="180"
+            android:src="@drawable/ic_back" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/txtTitleVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/yekan_bakh_fa_num_regular"
+        android:text="عنوان"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/cardView6"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView6"
+        android:layout_width="380dp"
+        android:layout_marginTop="15dp"
+        android:layout_height="214dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitleVideo">
+
+        <VideoView
+            android:id="@+id/videoViewFinal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/txtDetailVideo"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/yekan_bakh_fa_num_regular"
+        android:text="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد."
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/cardView6"
+        app:layout_constraintStart_toStartOf="@+id/cardView6"
+        app:layout_constraintTop_toBottomOf="@+id/cardView6" />
+
+    <TextView
+
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/yekan_bakh_fa_num_regular"
+        android:text="درصد پیشرفت"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txtDetailVideo"
+        app:layout_constraintTop_toBottomOf="@+id/txtDetailVideo"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/yekan_bakh_fa_num_regular"
+        android:text="۰/۱۰۰"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        app:layout_constraintStart_toStartOf="@+id/seekBar"
+        app:layout_constraintTop_toBottomOf="@+id/txtDetailVideo"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:progress="40"
+        android:max="100"
+        android:enabled="false"
+        android:progressDrawable="@drawable/custom_progress"
+        android:splitTrack="false"
+        android:thumb="@drawable/ic_rocket_progress"
+        app:layout_constraintEnd_toEndOf="@+id/textView8"
+        app:layout_constraintStart_toStartOf="@+id/txtDetailVideo"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/appCompatButton"
+        android:layout_width="380dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_white_btn_border"
+        android:fontFamily="@font/yekan_bakh_fa_num_regular"
+        android:text="راهنما"
+        android:textColor="#000080"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/seekBar"
+        app:layout_constraintStart_toStartOf="@+id/seekBar"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+    <FrameLayout
+        android:id="@+id/frameLayoutNext"
+        android:layout_width="178dp"
+        android:layout_height="54dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/appCompatButton"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatButton">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnNext"
+            android:layout_width="178dp"
+            android:layout_height="54dp"
+            android:layout_gravity="center"
+            android:background="@drawable/background_white_btn_border"
+            android:fontFamily="@font/yekan_bakh_fa_num_regular"
+            android:text="قسمت بعدی"
+            android:textColor="#000080"
+            android:textSize="16sp"
+            />
+
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/imgPrevious"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/arrow_right"
+        app:layout_constraintBottom_toBottomOf="@+id/frameLayoutNext"
+        app:layout_constraintEnd_toEndOf="@+id/frameLayoutNext"
+        app:layout_constraintTop_toTopOf="@+id/frameLayoutNext" />
+
+    <FrameLayout
+        android:id="@+id/frameLayoutPrevious"
+        android:layout_width="178dp"
+        android:layout_height="54dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/frameLayoutNext"
+        app:layout_constraintStart_toStartOf="@+id/appCompatButton"
+        app:layout_constraintTop_toTopOf="@+id/frameLayoutNext">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnPrevious"
+            android:layout_width="178dp"
+            android:layout_height="54dp"
+            android:layout_gravity="center"
+            android:background="@drawable/background_white_btn_border"
+            android:fontFamily="@font/yekan_bakh_fa_num_regular"
+            android:text="قسمت قبلی"
+            android:textColor="#000080"
+            android:textSize="16sp" />
+
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/imgNext"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="30dp"
+        android:src="@drawable/arrow_left"
+        app:layout_constraintBottom_toBottomOf="@+id/frameLayoutPrevious"
+        app:layout_constraintStart_toStartOf="@+id/frameLayoutPrevious"
+        app:layout_constraintTop_toTopOf="@+id/frameLayoutPrevious" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

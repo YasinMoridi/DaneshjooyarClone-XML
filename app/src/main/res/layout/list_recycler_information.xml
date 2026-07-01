@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recyclerViewHome"
+    android:layout_width="380dp"
+    android:layout_height="96dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginStart="7dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="5dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="100dp"
+        android:layout_height="64dp"
+        android:layout_gravity="center|end"
+        app:cardCornerRadius="8dp">
+
+        <ImageView
+            android:id="@+id/imgRecyclerInformation"
+            android:layout_width="113dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center"
+            android:src="@drawable/img_curses_git" />
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/txtRecyclerInformation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="30dp"
+        android:textDirection="rtl"
+        android:fontFamily="@font/yekan_bakh_fa_num_regular"
+        android:text="PHP  چیست؟"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.MainActivity">
+
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/supportTicket"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="start|center"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/ic_support_action_bar" />
+
+        <ImageView
+            android:layout_width="39dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center"
+            android:src="@drawable/logo_app" />
+
+        <ImageView
+            android:id="@+id/ic_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="end|center"
+            android:layout_marginEnd="20dp"
+            android:rotation="180"
+            android:src="@drawable/ic_more_action_bar" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <FrameLayout
+            android:id="@+id/frameLayoutEvidenceFragment"
+            android:layout_width="136dp"
+            android:layout_height="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/ic_evidence_bottom_nav"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="7dp"
+                android:src="@drawable/ic_evidence_bottom_nav" />
+
+            <ImageView
+                android:id="@+id/ic_evidence_blue_bottom_nav"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="7dp"
+                android:src="@drawable/ic_evidence_blue_bottom_nav"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/txt_evidence_bottom_nav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="13dp"
+                android:fontFamily="@font/yekan_bakh_fa_num_regular"
+                android:text="مدارک"
+                android:textColor="#757575"
+                android:textSize="14sp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayoutAboutFragment"
+            android:layout_width="136dp"
+            android:layout_height="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/ic_about_bottom_nav"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="7dp"
+                android:src="@drawable/ic_about_bottom_nav" />
+
+            <ImageView
+                android:id="@+id/ic_about_blue_bottom_nav"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="7dp"
+                android:src="@drawable/ic_about_blue_bottom_nav"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/txt_about_bottom_nav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="13dp"
+                android:textColor="#757575"
+                android:fontFamily="@font/yekan_bakh_fa_num_regular"
+                android:text="درباره ما"
+                android:textSize="14sp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayoutHomeFragment"
+            android:layout_width="136dp"
+            android:layout_height="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/ic_home_bottom_nav"
+                android:layout_width="24dp"
+                android:visibility="invisible"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="7dp"
+                android:src="@drawable/ic_home_bottom_nav" />
+
+            <ImageView
+                android:id="@+id/ic_home_blue_bottom_nav"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="7dp"
+                android:src="@drawable/ic_home_blue_bottom_nav"
+                />
+
+            <TextView
+                android:id="@+id/txt_home_bottom_nav"
+                android:layout_width="wrap_content"
+                android:textColor="#000080"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="13dp"
+                android:fontFamily="@font/yekan_bakh_fa_num_regular"
+                android:text="خانه"
+                android:textSize="14sp" />
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerViewMain"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

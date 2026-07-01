@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recyclerViewTop"
+    android:layout_width="147dp"
+    android:layout_height="36dp"
+    android:layout_gravity="center_horizontal"
+    app:cardElevation="1dp"
+    app:cardCornerRadius="5dp"
+    app:cardUseCompatPadding="true">
+
+    <FrameLayout
+        android:id="@+id/frameLayoutRecyclerTop"
+        android:layout_width="match_parent"
+        android:background="@drawable/background_recycler_top"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageViewRecyclerTop"
+            android:layout_marginEnd="5dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_wensite"
+            android:layout_gravity="end|center_vertical"/>
+
+        <TextView
+            android:id="@+id/txtRecyclerTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="طراحی سایت"
+            android:layout_marginEnd="5dp"
+            android:fontFamily="@font/yekan_bakh_fa_num_regular"
+            android:textSize="12sp"
+            android:layout_gravity="center"/>
+
+    </FrameLayout>
+
+</androidx.cardview.widget.CardView>

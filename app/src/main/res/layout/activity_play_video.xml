@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.PlayVideoActivity">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/supportTicket"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="start|center"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/ic_support_action_bar" />
+
+        <ImageView
+            android:layout_width="39dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center"
+            android:src="@drawable/logo_app" />
+
+        <ImageView
+            android:id="@+id/ic_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="end|center"
+            android:layout_marginEnd="20dp"
+            android:rotation="180"
+            android:src="@drawable/ic_back" />
+
+    </FrameLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="380dp"
+        android:layout_height="214dp"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout">
+
+        <VideoView
+            android:id="@+id/playVideoSample"
+            android:layout_width="380dp"
+            android:layout_height="214dp"
+            android:layout_gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewInformation"
+        android:layout_width="190dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:elevation="1dp"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/white" />
+
+        <FrameLayout
+            android:id="@+id/frameLayoutShadowInformation"
+            android:layout_width="190dp"
+            android:layout_height="20dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/shadow_select_video">
+
+
+            <FrameLayout
+                android:id="@+id/frameLayoutInformation"
+                android:layout_width="190dp"
+                android:layout_height="3dp"
+                android:layout_gravity="bottom"
+                android:background="#000080" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/txtInformation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/yekan_bakh_fa_num_regular"
+            android:text="اطلاعات"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewMoreVideo"
+        android:layout_width="190dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:elevation="1dp"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/cardViewInformation"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/white" />
+
+        <FrameLayout
+            android:id="@+id/frameLayoutShadowMoreVideo"
+            android:layout_width="190dp"
+            android:layout_height="20dp"
+            android:layout_gravity="bottom"
+            android:background="@color/white">
+
+
+            <FrameLayout
+                android:id="@+id/frameLayoutMoreVideo"
+                android:layout_width="190dp"
+                android:layout_height="3dp"
+                android:layout_gravity="bottom"
+                android:background="@color/white" />
+
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/txtMoreVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/yekan_bakh_fa_num_regular"
+            android:text="ویدیو ها"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerViewInformationOrVideos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewMoreVideo" />
+</androidx.constraintlayout.widget.ConstraintLayout>
